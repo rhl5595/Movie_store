@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container" xmlns="http://www.w3.org/1999/html">
+    <div class="row">
+        <div class="col-md-6">
+    <img src="{{m.Img.url}}" width="300" height="300">
+    </div>
+<div class="col-md-6">
+    <h1>Title : {{m.name}}</h1>
+    <h6>Description : {{m.dec}}</h6>
+<h5>Year : {{m.Year}}</h5>
+<a href="{% url 'mgapp:update' m.id %}" class="btn btn-primary">Update</a>
+<a href="{% url 'mgapp:delete' m.id %}" class="btn btn-primary">Delete</a>
+
+</div>
+    </div>
+</div>
+
+{% endblock %}
